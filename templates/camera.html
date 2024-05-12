@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            background-size: cover; /* Cover the entire background */
+            background-position: center;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .btn-secondary {
+            background-color: #eec60a;
+            border-color: ##eec60a;
+        }
+
+        .btn-secondary:hover {
+            background-color: #fbff7c;
+            border-color: #fbff7c;
+        }
+
+        .camera-feed {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://i.stack.imgur.com/40R2b.jpg');
+  height: 120vh;
+">
+    <div class="container">
+        <h1 class="text-center mb-4">Camera</h1>
+        <div class="text-center">
+            <a href="/" class="btn btn-secondary btn-lg">Back to Home</a>
+        </div>
+        <div class="text-center mt-4">
+            <img src="{{ url_for('video_feed') }}" alt="Camera Feed" class="camera-feed">
+        </div>
+    </div>
+</body>
+</html>
